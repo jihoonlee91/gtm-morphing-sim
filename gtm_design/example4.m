@@ -24,7 +24,7 @@ fprintf(1,' Done\n');
 % Simulate and plot
 figure(1),clf
 fprintf(1,'Simulating...');
-tic;sim('gtm_design',[0 60]);realdt=toc; 
+tic;sim('gtm_design',[0 60]);realdt=toc;
 tout1=tout;Lon1=sout.eom.longitude*180/pi; Lat1=sout.eom.latitude*180/pi; Alt1=sout.eom.altitude;
 fprintf(1,' Done, Running at %6.2f times real-time\n',60/realdt)
 
