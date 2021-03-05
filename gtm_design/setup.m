@@ -13,6 +13,9 @@ addpath('./obj');
 % Add libriary directory
 addpath('./libs');
 
+% Add analysis directory
+addpath('./analysis');
+
 rehash path
 
 
