@@ -26,7 +26,7 @@ fprintf(1,' Done\n');
 % Construct 1 degree double sequence. 
 f=100;    % 100 Hz input sampling on sequence
 d=0.5;      % 2 sec pulse duration
-a=[1 1 1];% pulse amplitude(deg), [ele,rud,ail]
+a=[0 0 1];% pulse amplitude(deg), [ele,rud,ail]
 
 dub=[zeros(4*f*d,1);ones(f*d,1);-1*ones(f*d,1);zeros(4*f*d,1)]; % a doublet
 ulin = [  [a(1)*dub;0*dub;0*dub], [0*dub;0*dub;a(3)*dub], [0*dub;a(2)*dub;0*dub] ]; % doublet sequence
