@@ -20,7 +20,7 @@ if ~exist('vehicle','var') || isempty(vehicle)
     vehicle='GTM_T2';
 end
 
-if strcmp(vehicle,'GTM'),
+if strcmp(vehicle,'GTM')
     vehicle='GTM_T2';  % Backwards compatible
 end
 
