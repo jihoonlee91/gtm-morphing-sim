@@ -1,6 +1,6 @@
-# GTM_DesignSim_Morphing
+# GTM Morphing Simulation
 
-모핑 항공기(morphing aircraft) 연구를 위해 NASA GTM_DesignSim을 기반으로 형상 변형(morphing) 관련 동역학/제어 요소를 추가한 시뮬레이션입니다.
+A simulation built on NASA's GTM_DesignSim, extended with morphing-related dynamics and control elements for morphing aircraft research. This is the actively maintained version; `gtm-morphing-sim-legacy` is an earlier, superseded snapshot kept for reference.
 
 ## Base simulation: GTM_DesignSim (NASA)
 
@@ -16,3 +16,5 @@ and the references therein for a summary of the research.
 
 The simulation, however, was released as open-source and has been found useful in many other applications where a
 non-linear large-envelope flight dynamics simulation is required.
+
+Development environment: MATLAB / Simulink
