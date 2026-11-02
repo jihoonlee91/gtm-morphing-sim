@@ -1,6 +1,6 @@
 # GTM Morphing Simulation
 
-A simulation built on NASA's GTM_DesignSim, extended with morphing-related dynamics and control elements for morphing aircraft research. This is the actively maintained version; [`gtm-morphing-sim-legacy`](https://github.com/jihoonlee91/gtm-morphing-sim-legacy) is an earlier, superseded snapshot kept for reference.
+A simulation built on NASA's GTM_DesignSim, extended with morphing-related dynamics and control elements for morphing aircraft research.
 
 This repository is used as the shared simulation base across several of the morphing-aircraft projects in this account (e.g. [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control)), rather than being tied to a single paper.
 
