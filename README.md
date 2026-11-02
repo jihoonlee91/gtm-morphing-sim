@@ -57,10 +57,9 @@ NASA's original quick-start guide is in `gtm_design/docs/gtm_design_QuickStart.d
 
 | Publication | Code |
 |---|---|
-| [Linear Parameter-Varying Control of Variable Span-Sweep Morphing Aircraft](https://jihoonlee91.github.io/papers/2019-lpv-variable-span-sweep-morphing.html) — *AIAA SciTech 2019* | [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control) |
 | [Aircraft Autopilot Design Using Asymmetric Variable-Span Wing Morphing](https://jihoonlee91.github.io/papers/2021-aircraft-autopilot-asymmetric-morphing.html) — *ICAS 2021* | — |
-| [Self-Scheduled LPV Control of Asymmetric Variable-Span Morphing UAV](https://jihoonlee91.github.io/papers/2023-self-scheduled-lpv-asymmetric-morphing-uav.html) — *Sensors 2023* | — |
-| [Self-Scheduled Parameter-Varying Control of Asymmetric Variable-Span Morphing UAV](https://jihoonlee91.github.io/papers/2023-msc-thesis-lpv-asymmetric-morphing.html) — *Ph.D. dissertation, SNU 2023* | — |
+| [Self-Scheduled LPV Control of Asymmetric Variable-Span Morphing UAV](https://jihoonlee91.github.io/papers/2023-self-scheduled-lpv-asymmetric-morphing-uav.html) — *Sensors 2023* | [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control) |
+| [Self-Scheduled Parameter-Varying Control of Asymmetric Variable-Span Morphing UAV](https://jihoonlee91.github.io/papers/2023-msc-thesis-lpv-asymmetric-morphing.html) — *Ph.D. dissertation, SNU 2023* | [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control) |
 
 ## Credits
 
