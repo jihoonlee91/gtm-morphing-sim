@@ -1,44 +1,71 @@
+<div align="center">
+
 # GTM Morphing Simulation
 
-A simulation built on NASA's GTM_DesignSim, extended with morphing-related dynamics and control elements for morphing aircraft research.
+**NASA's Generic Transport Model simulation, extended for morphing-wing flight dynamics and control research.**
 
-This repository is used as the shared simulation base across several of the morphing-aircraft projects in this account (e.g. [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control)), rather than being tied to a single paper.
+![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white)
+![Simulink](https://img.shields.io/badge/Simulink-0076A8?style=flat-square)
+[![Built on NASA GTM_DesignSim](https://img.shields.io/badge/built%20on-NASA%20GTM__DesignSim-e03c31?style=flat-square&logo=nasa&logoColor=white)](https://github.com/nasa/GTM_DesignSim)
+![License](https://img.shields.io/badge/license-NASA%20Open%20Source%20Agreement-lightgrey?style=flat-square)
 
-## Base simulation: GTM_DesignSim (NASA)
+<img src="https://jihoonlee91.github.io/assets/figures/2023-self-scheduled-lpv-asymmetric-morphing-uav-1.webp" width="520" alt="NASA GTM-T2 subscale aircraft">
 
-The GTM_DesignSim is a batch simulation intended for design and analysis of flight control laws. It models the
-dynamics of a 5.5% scale model of a generic transport aircraft. It was developed to allow fault accomodating control
-algorithms to be developed and refined in simulation before being tested on an experimental subscale model.
+<sub>NASA GTM-T2, the 5.5 %-scale generic transport aircraft this simulation models</sub>
 
-See:
+</div>
 
-Cunningham, K., Cox, D. E., Murri, D. G., and Riddick, S. E., *"A Piloted Evaluation of Damage Accommodating Flight Control Using a Remotely Piloted Vehicle,"* **AIAA-2011-6451**, AIAA Guidance, Navigation, and Control Conference and Exhibit, Portland Oregon, August 2011.
+## Why
 
-and the references therein for a summary of the research.
+Morphing-wing control research needs a nonlinear, large-envelope flight simulation that can be trimmed, linearized, and closed-loop tested. NASA's open-source **GTM_DesignSim** provides exactly that for a subscale transport aircraft; this repository adds the morphing-specific dynamics, control law, and analysis on top of it, and serves as the **shared simulation base** for the morphing projects in this account (e.g. [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control)).
 
-The simulation, however, was released as open-source and has been found useful in many other applications where a
-non-linear large-envelope flight dynamics simulation is required.
+## What's added for morphing
 
-## What Was Added for Morphing Research
+| File | Purpose |
+|---|---|
+| `gtm_design/controller.m` | morphing-aircraft control law |
+| `gtm_design/aero_analysis.m` | aerodynamic analysis of morphing configurations |
+| `gtm_design/analysis/compare_control.m` | side-by-side controller comparison |
+| `gtm_design/plot_result.m` | result plots for the morphing configuration |
+| `gtm_design/example_sfunction.m` | example custom S-function (alongside NASA's `example1.m`–`example6.m`) |
 
-- `gtm_design/aero_analysis.m`, `gtm_design/analysis/compare_control.m`: aerodynamic and controller-comparison analysis added on top of the base NASA sim
-- `gtm_design/controller.m`: morphing-aircraft control law
-- `gtm_design/plot_result.m`: result plotting for the morphing configuration
-- `gtm_design/example_sfunction.m`: example custom S-function, in addition to NASA's original `example1.m`–`example6.m`
+## Quick start
 
-## Repository Structure
+```matlab
+cd gtm_design
+setup   % add the required paths (run first)
+main    % top-level simulation entry point
+```
 
-- `gtm_design/setup.m`: adds the required MATLAB paths (run this first)
-- `gtm_design/main.m`: top-level simulation entry point
-- `gtm_design/config/`: aircraft/damage/noise parameters and the polynomial aero database (`T2_polynomial_aerodatabase.mat`)
-- `gtm_design/mfiles/`: simulation utilities (trim, linearization, workspace helpers)
-- `gtm_design/libs/`: Simulink library blocks (`UserContent_lib.mdl`)
-- `gtm_design/obj/`: precompiled MEX binaries (Windows/macOS/Linux) for the S-function blocks
-- `gtm_design/docs/`: original NASA GTM_DesignSim documentation (quick start, FAQ, reference, global tags)
-- `gtm_design/gtm_design.slx`: the Simulink model (`.slx.original` and `.slx.r2018b` are earlier-format copies kept for compatibility)
+NASA's original quick-start guide is in `gtm_design/docs/gtm_design_QuickStart.doc`.
 
-## How to Run
+<details>
+<summary><b>Repository layout</b></summary>
 
-Open MATLAB, `cd` into `gtm_design`, run `setup.m`, then `main.m`. See `gtm_design/docs/gtm_design_QuickStart.doc` for the original NASA quick-start guide.
+- `gtm_design/setup.m` — adds the required MATLAB paths
+- `gtm_design/main.m` — top-level simulation entry point
+- `gtm_design/config/` — aircraft / damage / noise parameters and the polynomial aero database (`T2_polynomial_aerodatabase.mat`)
+- `gtm_design/mfiles/` — simulation utilities (trim, linearization, workspace helpers)
+- `gtm_design/libs/` — Simulink library blocks (`UserContent_lib.mdl`)
+- `gtm_design/obj/` — precompiled MEX binaries (Windows / macOS / Linux) for the S-function blocks
+- `gtm_design/docs/` — original NASA GTM_DesignSim documentation
+- `gtm_design/gtm_design.slx` — the Simulink model (`.slx.original` and `.slx.r2018b` kept for compatibility)
 
-Development environment: MATLAB / Simulink
+</details>
+
+## Research built on the GTM model
+
+| Publication | Code |
+|---|---|
+| [Linear Parameter-Varying Control of Variable Span-Sweep Morphing Aircraft](https://jihoonlee91.github.io/papers/2019-lpv-variable-span-sweep-morphing.html) — *AIAA SciTech 2019* | [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control) |
+| [Aircraft Autopilot Design Using Asymmetric Variable-Span Wing Morphing](https://jihoonlee91.github.io/papers/2021-aircraft-autopilot-asymmetric-morphing.html) — *ICAS 2021* | — |
+| [Self-Scheduled LPV Control of Asymmetric Variable-Span Morphing UAV](https://jihoonlee91.github.io/papers/2023-self-scheduled-lpv-asymmetric-morphing-uav.html) — *Sensors 2023* | — |
+| [Self-Scheduled Parameter-Varying Control of Asymmetric Variable-Span Morphing UAV](https://jihoonlee91.github.io/papers/2023-msc-thesis-lpv-asymmetric-morphing.html) — *Ph.D. dissertation, SNU 2023* | — |
+
+## Credits
+
+Base simulation: [NASA GTM_DesignSim](https://github.com/nasa/GTM_DesignSim), released under the NASA Open Source Agreement (see `LicenseAgreement.pdf`). Background:
+
+> Cunningham, K., Cox, D. E., Murri, D. G., and Riddick, S. E., "A Piloted Evaluation of Damage Accommodating Flight Control Using a Remotely Piloted Vehicle," AIAA-2011-6451, AIAA GNC Conference, Portland, OR, 2011.
+
+<sub>Part of my Ph.D. research at the Seoul National University Flight Dynamics and Control Lab — more at <a href="https://jihoonlee91.github.io/">jihoonlee91.github.io</a>.</sub>
