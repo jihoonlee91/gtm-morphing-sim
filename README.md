@@ -6,6 +6,8 @@
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white)
 ![Simulink](https://img.shields.io/badge/Simulink-0076A8?style=flat-square)
+[![MATLAB smoke test](https://github.com/jihoonlee91/morphing-uav-gtm-sim/actions/workflows/matlab.yml/badge.svg)](https://github.com/jihoonlee91/morphing-uav-gtm-sim/actions/workflows/matlab.yml)
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=jihoonlee91/morphing-uav-gtm-sim&file=gtm_design/main.m)
 [![Built on NASA GTM_DesignSim](https://img.shields.io/badge/built%20on-NASA%20GTM__DesignSim-e03c31?style=flat-square&logo=nasa&logoColor=white)](https://github.com/nasa/GTM_DesignSim)
 ![License](https://img.shields.io/badge/license-NASA%20Open%20Source%20Agreement-lightgrey?style=flat-square)
 
@@ -50,6 +52,8 @@ main    % top-level simulation entry point
 ```
 
 NASA's original quick-start guide is in `gtm_design/docs/gtm_design_QuickStart.doc`.
+
+A quick check that your MATLAB has everything (it also runs in CI on every push): `runtests("tests")` from the repository root — trims at 100 kt level flight and flies five seconds.
 
 <details>
 <summary><b>Repository layout</b></summary>
