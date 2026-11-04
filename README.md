@@ -19,19 +19,19 @@
 
 ## Highlights
 
-- NASA's open-source GTM-T2 (5.5 %-scale transport) simulation with continuously telescoping left and right wingtips — mass, center of mass, inertia, and aerodynamic coefficients all vary with the morphing parameters.
+- NASA's open-source GTM-T2 (5.5 %-scale transport) simulation with continuously telescoping left and right wingtips — mass, center of mass, and inertia vary with the morphing parameters (the full morphing aerodynamics and controllers live in [`morphing-uav-lpv-control`](https://github.com/jihoonlee91/morphing-uav-lpv-control)).
 - Trimmable and linearizable across the envelope, so one model serves both controller design and nonlinear closed-loop testing.
 - The shared simulation base for the *Sensors* 2023 / Ph.D. controllers in [`morphing-uav-lpv-control`](https://github.com/jihoonlee91/morphing-uav-lpv-control).
 
 ## Why
 
-Morphing-wing control research needs a nonlinear, large-envelope flight simulation that can be trimmed, linearized, and closed-loop tested. NASA's open-source **GTM_DesignSim** provides exactly that for a subscale transport aircraft; this repository adds the morphing-specific dynamics, control law, and analysis on top of it, and serves as the **shared simulation base** for the morphing projects in this account (e.g. [`morphing-uav-lpv-control`](https://github.com/jihoonlee91/morphing-uav-lpv-control)).
+Morphing-wing control research needs a nonlinear, large-envelope flight simulation that can be trimmed, linearized, and closed-loop tested. NASA's open-source **GTM_DesignSim** provides exactly that for a subscale transport aircraft; this repository adds the wingtip-morphing effects and morphing analysis on top of it, and serves as the **shared simulation base** for the morphing projects in this account (e.g. [`morphing-uav-lpv-control`](https://github.com/jihoonlee91/morphing-uav-lpv-control)).
 
 ## What's added for morphing
 
 | File | Purpose |
 |---|---|
-| `gtm_design/controller.m` | morphing-aircraft control law |
+| `gtm_design/gtm_design.slx` (`MorphingEffects` blocks) | left/right wingtip morphing effects on mass, center of mass, and inertia |
 | `gtm_design/aero_analysis.m` | aerodynamic analysis of morphing configurations |
 | `gtm_design/analysis/compare_control.m` | side-by-side controller comparison |
 | `gtm_design/plot_result.m` | result plots for the morphing configuration |
