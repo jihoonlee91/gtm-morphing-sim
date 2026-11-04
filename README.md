@@ -29,6 +29,12 @@ Morphing-wing control research needs a nonlinear, large-envelope flight simulati
 | `gtm_design/plot_result.m` | result plots for the morphing configuration |
 | `gtm_design/example_sfunction.m` | example custom S-function (alongside NASA's `example1.m`–`example6.m`) |
 
+## Requirements
+
+- MATLAB R2020b or later with Simulink (`gtm_design.slx` was saved in R2020b; `.slx.r2018b` opens in R2018b)
+- Control System Toolbox (`ss`, `damp` in the analysis and example scripts)
+- Precompiled S-function MEX binaries for Windows, macOS, and Linux are in `gtm_design/obj/`, so no C compiler is needed
+
 ## Quick start
 
 ```matlab
