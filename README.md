@@ -61,11 +61,11 @@ NASA's original quick-start guide is in `gtm_design/docs/gtm_design_QuickStart.d
 | [Flight Control of Asymmetric Variable-Span Morphing Aircraft Using Nonlinear Dynamic Inversion](https://jihoonlee91.github.io/papers/2019-flight-control-nonlinear-dynamic-inversion-gold.html) — *APISAT 2019, Gold Award* | — |
 | [Aircraft Autopilot Design Using Asymmetric Variable-Span Wing Morphing](https://jihoonlee91.github.io/papers/2021-aircraft-autopilot-asymmetric-morphing.html) — *ICAS 2021* | — |
 | [Self-Scheduled LPV Control of Asymmetric Variable-Span Morphing UAV](https://jihoonlee91.github.io/papers/2023-self-scheduled-lpv-asymmetric-morphing-uav.html) — *Sensors 2023* | [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control) |
-| [Self-Scheduled Parameter-Varying Control of Asymmetric Variable-Span Morphing UAV](https://jihoonlee91.github.io/papers/2023-msc-thesis-lpv-asymmetric-morphing.html) — *Ph.D. dissertation, SNU 2023* | [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control) |
+| [Self-Scheduled Parameter-Varying Control of Asymmetric Variable-Span Morphing UAV](https://jihoonlee91.github.io/papers/2023-phd-dissertation-lpv-asymmetric-morphing.html) — *Ph.D. dissertation, SNU 2023* | [`gtm-lpv-control`](https://github.com/jihoonlee91/gtm-lpv-control) |
 
-## Credits
+## License and credits
 
-Base simulation: [NASA GTM_DesignSim](https://github.com/nasa/GTM_DesignSim), released under the NASA Open Source Agreement (see `LicenseAgreement.pdf`). Background:
+Base simulation: [NASA GTM_DesignSim](https://github.com/nasa/GTM_DesignSim). This repository is a derivative of it and is distributed under the NASA Open Source Agreement 1.3 — see [`LICENSE.md`](LICENSE.md) and `LicenseAgreement.pdf`. GitHub's **Cite this repository** button uses [`CITATION.cff`](CITATION.cff). Background:
 
 > Cunningham, K., Cox, D. E., Murri, D. G., and Riddick, S. E., "A Piloted Evaluation of Damage Accommodating Flight Control Using a Remotely Piloted Vehicle," AIAA-2011-6451, AIAA GNC Conference, Portland, OR, 2011.
 
