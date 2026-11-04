@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this simulation, please cite the Sensors 2023 paper below and NASA's GTM_DesignSim."
-title: "gtm-morphing-sim: NASA GTM simulation extended for morphing-wing flight dynamics and control"
+title: "morphing-uav-gtm-sim: NASA GTM simulation extended for morphing-wing flight dynamics and control"
 type: software
 authors:
   - family-names: Lee
     given-names: Jihoon
     orcid: "https://orcid.org/0000-0001-5327-824X"
-repository-code: "https://github.com/jihoonlee91/gtm-morphing-sim"
+repository-code: "https://github.com/jihoonlee91/morphing-uav-gtm-sim"
 keywords:
   - morphing aircraft
   - flight simulation
